@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="035f2d8354c54dec8b18cef0747f8f6e" Name="Diagram1">
+        <EntityTypeShape EntityType="аква_паркModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="аква_паркModel.Билет" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="аква_паркModel.дата_найма" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="аква_паркModel.Заказ" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="аква_паркModel.Клиент" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="аква_паркModel.Оплата_труда" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="аква_паркModel.Сотрудники" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="аква_паркModel.FK__Заказ__Код_заказ__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="аква_паркModel.FK__Сотрудник__Код_т__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="аква_паркModel.FK__Сотрудник__Код_с__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="аква_паркModel.FK__Заказ__Код_клиен__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="аква_паркModel.FK__Сотрудник__Код_с__0A9D95DB" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

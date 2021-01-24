@@ -1,0 +1,13 @@
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\bin\Debug\netcoreapp3.1\factory_method_tetris.exe
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\bin\Debug\netcoreapp3.1\factory_method_tetris.deps.json
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\bin\Debug\netcoreapp3.1\factory_method_tetris.runtimeconfig.json
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\bin\Debug\netcoreapp3.1\factory_method_tetris.runtimeconfig.dev.json
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\bin\Debug\netcoreapp3.1\factory_method_tetris.dll
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\bin\Debug\netcoreapp3.1\factory_method_tetris.pdb
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\obj\Debug\netcoreapp3.1\factory_method_tetris.csprojAssemblyReference.cache
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\obj\Debug\netcoreapp3.1\factory_method_tetris.AssemblyInfoInputs.cache
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\obj\Debug\netcoreapp3.1\factory_method_tetris.AssemblyInfo.cs
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\obj\Debug\netcoreapp3.1\factory_method_tetris.csproj.CoreCompileInputs.cache
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\obj\Debug\netcoreapp3.1\factory_method_tetris.dll
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\obj\Debug\netcoreapp3.1\factory_method_tetris.pdb
+D:\для с#\паттерны\factory_method_tetris\factory_method_tetris\obj\Debug\netcoreapp3.1\factory_method_tetris.genruntimeconfig.cache

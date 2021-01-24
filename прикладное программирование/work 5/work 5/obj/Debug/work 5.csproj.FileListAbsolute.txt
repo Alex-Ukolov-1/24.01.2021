@@ -1,0 +1,20 @@
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work 5.csprojAssemblyReference.cache
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work_5.Form1.resources
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work_5.Form2.resources
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work_5.Properties.Resources.resources
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work 5.csproj.GenerateResource.cache
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work 5.csproj.CoreCompileInputs.cache
+D:\для с#\прикладное программирование\work 5\work 5\bin\Debug\work 5.exe.config
+D:\для с#\прикладное программирование\work 5\work 5\bin\Debug\work 5.exe
+D:\для с#\прикладное программирование\work 5\work 5\bin\Debug\work 5.pdb
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work 5.exe
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work 5.pdb
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work_5.Form3.resources
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work_5.Form4.resources
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work_5.Form5.resources
+D:\для с#\прикладное программирование\work 5\work 5\bin\Debug\EntityFramework.dll
+D:\для с#\прикладное программирование\work 5\work 5\bin\Debug\EntityFramework.SqlServer.dll
+D:\для с#\прикладное программирование\work 5\work 5\bin\Debug\EntityFramework.xml
+D:\для с#\прикладное программирование\work 5\work 5\bin\Debug\EntityFramework.SqlServer.xml
+D:\для с#\прикладное программирование\work 5\work 5\bin\Debug\ru\EntityFramework.resources.dll
+D:\для с#\прикладное программирование\work 5\work 5\obj\Debug\work 5.csproj.CopyComplete

@@ -1,0 +1,13 @@
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\obj\Debug\netcoreapp3.1\fabric_method_cinema.csprojAssemblyReference.cache
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\obj\Debug\netcoreapp3.1\fabric_method_cinema.AssemblyInfoInputs.cache
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\obj\Debug\netcoreapp3.1\fabric_method_cinema.AssemblyInfo.cs
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\obj\Debug\netcoreapp3.1\fabric_method_cinema.csproj.CoreCompileInputs.cache
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\bin\Debug\netcoreapp3.1\fabric_method_cinema.exe
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\bin\Debug\netcoreapp3.1\fabric_method_cinema.deps.json
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\bin\Debug\netcoreapp3.1\fabric_method_cinema.runtimeconfig.json
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\bin\Debug\netcoreapp3.1\fabric_method_cinema.runtimeconfig.dev.json
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\bin\Debug\netcoreapp3.1\fabric_method_cinema.dll
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\bin\Debug\netcoreapp3.1\fabric_method_cinema.pdb
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\obj\Debug\netcoreapp3.1\fabric_method_cinema.dll
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\obj\Debug\netcoreapp3.1\fabric_method_cinema.pdb
+D:\для с#\паттерны\fabric_method_cinema\fabric_method_cinema\obj\Debug\netcoreapp3.1\fabric_method_cinema.genruntimeconfig.cache

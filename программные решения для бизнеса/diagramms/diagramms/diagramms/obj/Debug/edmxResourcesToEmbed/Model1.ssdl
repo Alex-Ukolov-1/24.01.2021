@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище аква_паркModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Билет">
+    <Key>
+      <PropertyRef Name="Код_заказа" />
+    </Key>
+    <Property Name="Код_заказа" Type="int" Nullable="false" />
+    <Property Name="Код_сотрудника" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="дата_найма">
+    <Key>
+      <PropertyRef Name="Код_сотрудника" />
+    </Key>
+    <Property Name="Код_сотрудника" Type="int" Nullable="false" />
+    <Property Name="Дата_приёма_на_работу" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Заказ">
+    <Key>
+      <PropertyRef Name="Код_клиента" />
+      <PropertyRef Name="Код_заказа" />
+    </Key>
+    <Property Name="Код_клиента" Type="int" Nullable="false" />
+    <Property Name="Код_заказа" Type="int" Nullable="false" />
+    <Property Name="Дата_оформления" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Клиент">
+    <Key>
+      <PropertyRef Name="Код_клиента" />
+    </Key>
+    <Property Name="Код_клиента" Type="int" Nullable="false" />
+    <Property Name="Фамилия" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="Имя" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="Отчество" Type="char" MaxLength="20" />
+    <Property Name="Дата_рождения" Type="datetime" />
+    <Property Name="Домашний_адрес" Type="char" MaxLength="20" />
+    <Property Name="телефон" Type="char" MaxLength="20" />
+    <Property Name="icon" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Оплата_труда">
+    <Key>
+      <PropertyRef Name="Код_сотрудника" />
+    </Key>
+    <Property Name="Код_сотрудника" Type="int" Nullable="false" />
+    <Property Name="колвочасов" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="зарплата" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="график" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Сотрудники">
+    <Key>
+      <PropertyRef Name="Код_сотрудника" />
+      <PropertyRef Name="Код_труда" />
+    </Key>
+    <Property Name="Код_сотрудника" Type="int" Nullable="false" />
+    <Property Name="Код_труда" Type="int" Nullable="false" />
+    <Property Name="Дата_и_время" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Заказ__Код_заказ__0F624AF8">
+    <End Role="Билет" Type="Self.Билет" Multiplicity="1" />
+    <End Role="Заказ" Type="Self.Заказ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Билет">
+        <PropertyRef Name="Код_заказа" />
+      </Principal>
+      <Dependent Role="Заказ">
+        <PropertyRef Name="Код_заказа" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Заказ__Код_клиен__0E6E26BF">
+    <End Role="Клиент" Type="Self.Клиент" Multiplicity="1" />
+    <End Role="Заказ" Type="Self.Заказ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Клиент">
+        <PropertyRef Name="Код_клиента" />
+      </Principal>
+      <Dependent Role="Заказ">
+        <PropertyRef Name="Код_клиента" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Сотрудник__Код_с__09A971A2">
+    <End Role="дата_найма" Type="Self.дата_найма" Multiplicity="1" />
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="дата_найма">
+        <PropertyRef Name="Код_сотрудника" />
+      </Principal>
+      <Dependent Role="Сотрудники">
+        <PropertyRef Name="Код_сотрудника" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Сотрудник__Код_с__0A9D95DB">
+    <End Role="Оплата_труда" Type="Self.Оплата_труда" Multiplicity="1" />
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Оплата_труда">
+        <PropertyRef Name="Код_сотрудника" />
+      </Principal>
+      <Dependent Role="Сотрудники">
+        <PropertyRef Name="Код_сотрудника" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Сотрудник__Код_т__0B91BA14">
+    <End Role="Билет" Type="Self.Билет" Multiplicity="1" />
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Билет">
+        <PropertyRef Name="Код_заказа" />
+      </Principal>
+      <Dependent Role="Сотрудники">
+        <PropertyRef Name="Код_труда" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище аква_паркModelContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Билет" EntityType="Self.Билет" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="дата_найма" EntityType="Self.дата_найма" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Заказ" EntityType="Self.Заказ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Клиент" EntityType="Self.Клиент" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Оплата_труда" EntityType="Self.Оплата_труда" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Сотрудники" EntityType="Self.Сотрудники" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Заказ__Код_заказ__0F624AF8" Association="Self.FK__Заказ__Код_заказ__0F624AF8">
+      <End Role="Билет" EntitySet="Билет" />
+      <End Role="Заказ" EntitySet="Заказ" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Заказ__Код_клиен__0E6E26BF" Association="Self.FK__Заказ__Код_клиен__0E6E26BF">
+      <End Role="Клиент" EntitySet="Клиент" />
+      <End Role="Заказ" EntitySet="Заказ" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Сотрудник__Код_с__09A971A2" Association="Self.FK__Сотрудник__Код_с__09A971A2">
+      <End Role="дата_найма" EntitySet="дата_найма" />
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Сотрудник__Код_с__0A9D95DB" Association="Self.FK__Сотрудник__Код_с__0A9D95DB">
+      <End Role="Оплата_труда" EntitySet="Оплата_труда" />
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Сотрудник__Код_т__0B91BA14" Association="Self.FK__Сотрудник__Код_т__0B91BA14">
+      <End Role="Билет" EntitySet="Билет" />
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

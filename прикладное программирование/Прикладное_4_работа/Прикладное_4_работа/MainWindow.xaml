@@ -1,0 +1,27 @@
+﻿<Window x:Class="Прикладное_4_работа.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Прикладное_4_работа"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Width="200" HorizontalAlignment="Left">
+        <Button x:Name="terra" Content="грузоподъемность" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="144" Height="25" Click="Button_Click_1" Visibility="Hidden"/>
+            <Button x:Name="terra1" Content="текущий этаж" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="144" Height="25" Click="Button_Click_2" Visibility="Hidden"/>
+            <Button  x:Name="terra2" Content="вызвать на этаж" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Width="144" Height="24" Click="Button_Click" Visibility="Hidden"/>
+            <TextBox x:Name="rer" HorizontalAlignment="Left" Height="23" Margin="10,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" TextChanged="rer_TextChanged" Visibility="Hidden" />
+            <Button  x:Name="terra3" Content="загрузить" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" Width="144" Height="24" Click="Button_Click_3" Visibility="Hidden"/>
+            <Button  x:Name="terra4" Content="разгрузить" HorizontalAlignment="Left" Margin="10,307,0,0" VerticalAlignment="Top" Width="144" Height="24" Click="Button_Click_4" Visibility="Hidden"/>
+            <Button  x:Name="terra5" Content="дать энергию" HorizontalAlignment="Left" Margin="10,356,0,0" VerticalAlignment="Top" Width="144" Height="24" Click="Button_Click_5"/>
+            <Label  x:Name="terra6" Content="введите указанный этаж" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        </Grid>
+        <TextBlock  x:Name="terra7" Text="smart" Foreground="White" Height="420" Width="200"></TextBlock>
+        <Grid x:Name="gr3" HorizontalAlignment="Left" Width="100" Height="100" VerticalAlignment="Bottom" Margin="343,0,0,10" Background="Gold"></Grid>
+        <Label Content="вначале необходимо включить электричество" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top"/>
+        <Label Content="1 этажl" HorizontalAlignment="Left" Margin="520,261,0,0" VerticalAlignment="Top"/>
+        <Label Content="2 этаж" HorizontalAlignment="Left" Margin="520,155,0,0" VerticalAlignment="Top"/>
+        <Label Content="3 этаж" HorizontalAlignment="Left" Margin="520,38,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

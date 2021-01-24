@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище AMONIC_AIRLINESModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Command">
+    <Key>
+      <PropertyRef Name="Код_персонала" />
+      <PropertyRef Name="Код_экипажа" />
+      <PropertyRef Name="Дата_и_время" />
+    </Key>
+    <Property Name="Код_персонала" Type="int" Nullable="false" />
+    <Property Name="Код_экипажа" Type="int" Nullable="false" />
+    <Property Name="Дата_и_время" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="Roles" />
+    </Key>
+    <Property Name="Roles" Type="int" Nullable="false" />
+    <Property Name="email" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="PasswordD" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="NAMEE" Type="char" MaxLength="20" />
+    <Property Name="LASTNAME" Type="char" MaxLength="20" />
+    <Property Name="CITY" Type="char" MaxLength="20" />
+    <Property Name="Дата_рождения" Type="datetime" />
+    <Property Name="ACTIVE" Type="char" MaxLength="1" />
+    <Property Name="role" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Информация_о_рейсах">
+    <Key>
+      <PropertyRef Name="Код_самолета" />
+      <PropertyRef Name="Код_персонала" />
+    </Key>
+    <Property Name="Код_самолета" Type="int" Nullable="false" />
+    <Property Name="Код_персонала" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Оформленный_рейс">
+    <Key>
+      <PropertyRef Name="Должность" />
+      <PropertyRef Name="Код_рейса" />
+    </Key>
+    <Property Name="Должность" Type="int" Nullable="false" />
+    <Property Name="Код_рейса" Type="int" Nullable="false" />
+    <Property Name="Дата_оформления" Type="datetime" />
+  </EntityType>
+  <EntityType Name="РЕЙСЫ">
+    <Key>
+      <PropertyRef Name="Код_рейса" />
+    </Key>
+    <Property Name="Код_рейса" Type="int" Nullable="false" />
+    <Property Name="Название_рейса" Type="char" MaxLength="20" />
+    <Property Name="Место_локации" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Самолеты">
+    <Key>
+      <PropertyRef Name="Код_самолета" />
+    </Key>
+    <Property Name="Код_самолета" Type="int" Nullable="false" />
+    <Property Name="номер" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="бортовой_номер" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="Лицензия" Type="char" MaxLength="20" />
+    <Property Name="специализация" Type="char" MaxLength="20" />
+    <Property Name="Компания_производитель" Type="char" MaxLength="20" />
+    <Property Name="Домашний_адрес" Type="char" MaxLength="20" />
+    <Property Name="номер_двигателя" Type="char" MaxLength="20" />
+    <Property Name="Начало_эксплуатации" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Command__4CA06362">
+    <End Role="Информация_о_рейсах" Type="Self.Информация_о_рейсах" Multiplicity="1" />
+    <End Role="Command" Type="Self.Command" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Информация_о_рейсах">
+        <PropertyRef Name="Код_самолета" />
+        <PropertyRef Name="Код_персонала" />
+      </Principal>
+      <Dependent Role="Command">
+        <PropertyRef Name="Код_персонала" />
+        <PropertyRef Name="Код_экипажа" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Информаци__Код_п__49C3F6B7">
+    <End Role="РЕЙСЫ" Type="Self.РЕЙСЫ" Multiplicity="1" />
+    <End Role="Информация_о_рейсах" Type="Self.Информация_о_рейсах" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="РЕЙСЫ">
+        <PropertyRef Name="Код_рейса" />
+      </Principal>
+      <Dependent Role="Информация_о_рейсах">
+        <PropertyRef Name="Код_персонала" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Информаци__Код_с__48CFD27E">
+    <End Role="Самолеты" Type="Self.Самолеты" Multiplicity="1" />
+    <End Role="Информация_о_рейсах" Type="Self.Информация_о_рейсах" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Самолеты">
+        <PropertyRef Name="Код_самолета" />
+      </Principal>
+      <Dependent Role="Информация_о_рейсах">
+        <PropertyRef Name="Код_самолета" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Оформленн__Должн__44FF419A">
+    <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+    <End Role="Оформленный_рейс" Type="Self.Оформленный_рейс" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USERS">
+        <PropertyRef Name="Roles" />
+      </Principal>
+      <Dependent Role="Оформленный_рейс">
+        <PropertyRef Name="Должность" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Оформленн__Код_р__45F365D3">
+    <End Role="РЕЙСЫ" Type="Self.РЕЙСЫ" Multiplicity="1" />
+    <End Role="Оформленный_рейс" Type="Self.Оформленный_рейс" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="РЕЙСЫ">
+        <PropertyRef Name="Код_рейса" />
+      </Principal>
+      <Dependent Role="Оформленный_рейс">
+        <PropertyRef Name="Код_рейса" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Хранилище AMONIC_AIRLINESModelContainer">
+    <EntitySet Name="Command" EntityType="Self.Command" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Информация_о_рейсах" EntityType="Self.Информация_о_рейсах" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Оформленный_рейс" EntityType="Self.Оформленный_рейс" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="РЕЙСЫ" EntityType="Self.РЕЙСЫ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Самолеты" EntityType="Self.Самолеты" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Command__4CA06362" Association="Self.FK__Command__4CA06362">
+      <End Role="Информация_о_рейсах" EntitySet="Информация_о_рейсах" />
+      <End Role="Command" EntitySet="Command" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Информаци__Код_п__49C3F6B7" Association="Self.FK__Информаци__Код_п__49C3F6B7">
+      <End Role="РЕЙСЫ" EntitySet="РЕЙСЫ" />
+      <End Role="Информация_о_рейсах" EntitySet="Информация_о_рейсах" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Информаци__Код_с__48CFD27E" Association="Self.FK__Информаци__Код_с__48CFD27E">
+      <End Role="Самолеты" EntitySet="Самолеты" />
+      <End Role="Информация_о_рейсах" EntitySet="Информация_о_рейсах" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Оформленн__Должн__44FF419A" Association="Self.FK__Оформленн__Должн__44FF419A">
+      <End Role="USERS" EntitySet="USERS" />
+      <End Role="Оформленный_рейс" EntitySet="Оформленный_рейс" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Оформленн__Код_р__45F365D3" Association="Self.FK__Оформленн__Код_р__45F365D3">
+      <End Role="РЕЙСЫ" EntitySet="РЕЙСЫ" />
+      <End Role="Оформленный_рейс" EntitySet="Оформленный_рейс" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

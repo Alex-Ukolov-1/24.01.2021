@@ -1,0 +1,10 @@
+D:\для с#\паттерны\тут split\тут split\bin\Debug\тут split.exe.config
+D:\для с#\паттерны\тут split\тут split\bin\Debug\тут split.exe
+D:\для с#\паттерны\тут split\тут split\bin\Debug\тут split.pdb
+D:\для с#\паттерны\тут split\тут split\obj\Debug\тут split.csprojAssemblyReference.cache
+D:\для с#\паттерны\тут split\тут split\obj\Debug\тут_split.Form1.resources
+D:\для с#\паттерны\тут split\тут split\obj\Debug\тут_split.Properties.Resources.resources
+D:\для с#\паттерны\тут split\тут split\obj\Debug\тут split.csproj.GenerateResource.cache
+D:\для с#\паттерны\тут split\тут split\obj\Debug\тут split.csproj.CoreCompileInputs.cache
+D:\для с#\паттерны\тут split\тут split\obj\Debug\тут split.exe
+D:\для с#\паттерны\тут split\тут split\obj\Debug\тут split.pdb

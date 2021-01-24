@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище AMONIC_AIRLINESModelContainer" CdmEntityContainer="AMONIC_AIRLINESEntities1">
+    <EntitySetMapping Name="Commands">
+      <EntityTypeMapping TypeName="AMONIC_AIRLINESModel.Command">
+        <MappingFragment StoreEntitySet="Command">
+          <ScalarProperty Name="Код_персонала" ColumnName="Код_персонала" />
+          <ScalarProperty Name="Код_экипажа" ColumnName="Код_экипажа" />
+          <ScalarProperty Name="Дата_и_время" ColumnName="Дата_и_время" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AMONIC_AIRLINESModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="AMONIC_AIRLINESModel.USER">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="Roles" ColumnName="Roles" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="PasswordD" ColumnName="PasswordD" />
+          <ScalarProperty Name="NAMEE" ColumnName="NAMEE" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="Дата_рождения" ColumnName="Дата_рождения" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Информация_о_рейсах">
+      <EntityTypeMapping TypeName="AMONIC_AIRLINESModel.Информация_о_рейсах">
+        <MappingFragment StoreEntitySet="Информация_о_рейсах">
+          <ScalarProperty Name="Код_самолета" ColumnName="Код_самолета" />
+          <ScalarProperty Name="Код_персонала" ColumnName="Код_персонала" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Оформленный_рейс">
+      <EntityTypeMapping TypeName="AMONIC_AIRLINESModel.Оформленный_рейс">
+        <MappingFragment StoreEntitySet="Оформленный_рейс">
+          <ScalarProperty Name="Должность" ColumnName="Должность" />
+          <ScalarProperty Name="Код_рейса" ColumnName="Код_рейса" />
+          <ScalarProperty Name="Дата_оформления" ColumnName="Дата_оформления" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="РЕЙСЫ">
+      <EntityTypeMapping TypeName="AMONIC_AIRLINESModel.РЕЙСЫ">
+        <MappingFragment StoreEntitySet="РЕЙСЫ">
+          <ScalarProperty Name="Код_рейса" ColumnName="Код_рейса" />
+          <ScalarProperty Name="Название_рейса" ColumnName="Название_рейса" />
+          <ScalarProperty Name="Место_локации" ColumnName="Место_локации" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Самолеты">
+      <EntityTypeMapping TypeName="AMONIC_AIRLINESModel.Самолеты">
+        <MappingFragment StoreEntitySet="Самолеты">
+          <ScalarProperty Name="Код_самолета" ColumnName="Код_самолета" />
+          <ScalarProperty Name="номер" ColumnName="номер" />
+          <ScalarProperty Name="бортовой_номер" ColumnName="бортовой_номер" />
+          <ScalarProperty Name="Лицензия" ColumnName="Лицензия" />
+          <ScalarProperty Name="специализация" ColumnName="специализация" />
+          <ScalarProperty Name="Компания_производитель" ColumnName="Компания_производитель" />
+          <ScalarProperty Name="Домашний_адрес" ColumnName="Домашний_адрес" />
+          <ScalarProperty Name="номер_двигателя" ColumnName="номер_двигателя" />
+          <ScalarProperty Name="Начало_эксплуатации" ColumnName="Начало_эксплуатации" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище AMONIC_AIRLINESModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище AMONIC_AIRLINESModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище AMONIC_AIRLINESModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище AMONIC_AIRLINESModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AMONIC_AIRLINESModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище AMONIC_AIRLINESModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AMONIC_AIRLINESModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище AMONIC_AIRLINESModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище AMONIC_AIRLINESModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

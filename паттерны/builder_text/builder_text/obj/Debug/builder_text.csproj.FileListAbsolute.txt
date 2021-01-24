@@ -1,0 +1,15 @@
+D:\для с#\паттерны\builder_text\builder_text\bin\Debug\builder_text.exe.config
+D:\для с#\паттерны\builder_text\builder_text\bin\Debug\builder_text.exe
+D:\для с#\паттерны\builder_text\builder_text\bin\Debug\builder_text.pdb
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\builder_text.csprojAssemblyReference.cache
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\MainWindow.g.cs
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\App.g.cs
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\builder_text_MarkupCompile.cache
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\builder_text_MarkupCompile.lref
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\MainWindow.baml
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\builder_text.g.resources
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\builder_text.Properties.Resources.resources
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\builder_text.csproj.GenerateResource.cache
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\builder_text.csproj.CoreCompileInputs.cache
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\builder_text.exe
+D:\для с#\паттерны\builder_text\builder_text\obj\Debug\builder_text.pdb

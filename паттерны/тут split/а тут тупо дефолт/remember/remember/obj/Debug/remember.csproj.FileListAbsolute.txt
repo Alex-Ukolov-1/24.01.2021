@@ -1,0 +1,10 @@
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\bin\Debug\remember.exe.config
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\bin\Debug\remember.exe
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\bin\Debug\remember.pdb
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\obj\Debug\remember.csprojAssemblyReference.cache
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\obj\Debug\remember.Form1.resources
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\obj\Debug\remember.Properties.Resources.resources
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\obj\Debug\remember.csproj.GenerateResource.cache
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\obj\Debug\remember.csproj.CoreCompileInputs.cache
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\obj\Debug\remember.exe
+D:\для с#\паттерны\тут split\а тут тупо дефолт\remember\remember\obj\Debug\remember.pdb

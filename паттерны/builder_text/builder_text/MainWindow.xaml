@@ -1,0 +1,16 @@
+﻿<Window x:Class="builder_text.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:builder_text"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Открыть файл" HorizontalAlignment="Left" Margin="39,76,0,0" VerticalAlignment="Top" Width="224" Height="60" Name="s1" Click="button_1"/>
+        <Button Content="сохранить в формале xml" HorizontalAlignment="Left" Margin="39,230,0,0" VerticalAlignment="Top" Width="224" Height="60" Name="s2" Click="button2"/>
+        <ListBox x:Name="data" HorizontalAlignment="Left" Height="399" Margin="320,10,0,0" VerticalAlignment="Top" Width="462"/>
+        <Label Name="red" Content="хешкод" HorizontalAlignment="Left" FontSize="25" Margin="39,162,0,0" VerticalAlignment="Top" Width="224"/>
+
+    </Grid>
+</Window>
